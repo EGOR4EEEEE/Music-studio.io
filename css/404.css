@@ -10,9 +10,8 @@
     background-color: black;
   }
   @font-face {
-    font-family: 'Qwigley'; 
-    src: 
-    url('fonts/Qwigley-Regular.ttf') format('truetype');
+    font-family: 'Qwigley';
+    src: url('../fonts/Qwigley-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal; 
 }
