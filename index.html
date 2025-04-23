@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Prod Studio</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Inria+Sans&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Sora&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="header-container">
+        <div class="header-container-main">
+            <a href="/index.html">Главная</a>
+            <a href="/AboutUs.html">О нас</a>
+            <a href="/Uslugi.html">Услуги</a>
+            <a href="/Contacts.html">Контакты</a>
+        </div>
+        <div class="main-pic-column">
+          <div class="main-content">
+            <h1 class="container">MUSIC PROD</h1>
+            <div class="main-text">
+                <p>Раскройте свой голос у нас</p>
+            </div>
+            <div class="h2">
+                <h1 class="Best">Лучшая</h1>
+                <h1 class="Best">студия <span class="year">2025</span></h1>
+            </div>
+            <div class="main-text-description">
+                <p>Помогаем молодым талантам раскрыть свой голос во всей его красе<br>
+                  Гарантируем высокое качество звука и комфортное <br> времяпровождение</p>
+            </div>
+              <button class="cta-button" onclick="openForm()">
+                  <P>Записаться</P>
+              </button> 
+              
+              <div id="modal" class="modal">
+                  <div class="modal-content">
+                      <span class="close-btn" onclick="closeForm()">&times;</span>
+                      <h2 style=" margin-bottom: 25px;">Запись на студийную сессию</h2>
+                      <form id="sessionForm" onsubmit="handleSubmit(event)" class="sessionForm">
+                          <div class="form-group">
+                              <p class="label">Ваше имя:</p>
+                              <input type="text" required placeholder="Иван Иванов">
+                          </div>
+                          
+                          <div class="form-group">
+                              <p class="label">Контактный телефон:</p>
+                              <input type="tel" required pattern="[0-9]{11}" placeholder="79991234567">
+                          </div>
+                          
+                          <div class="form-group">
+                              <p class="label">Дата записи:</p>
+                              <input type="date" required>
+                          </div>
+                          
+                          <div class="form-group">
+                              <p class="label">Тип сессии:</p>
+                              <select required>
+                                  <option value="">Выберите тип</option>
+                                  <option>Запись вокала</option>
+                                  <option>Сведение трека</option>
+                                  <option>Мастеринг</option>
+                                  <option>Репетиция</option>
+                              </select>
+                          </div>
+                          
+                          <div class="form-group">
+                              <p class="label">Комментарии:</p>
+                              <textarea rows="3" placeholder="Особые пожелания..."></textarea>
+                          </div>
+                          
+                          <button type="submit">Отправить заявку</button>
+                      </form>
+                  </div>
+              </div>
+              <script>
+                  function openForm() {
+                      document.getElementById('modal').style.display = 'block';
+                  }
+              
+                  function closeForm() {
+                      document.getElementById('modal').style.display = 'none';
+                  }
+              
+                  function handleSubmit(event) {
+                      event.preventDefault();
+                      alert('Заявка принята! Мы свяжемся с вами для подтверждения.');
+                      closeForm();
+                  }
+              
+                  window.onclick = function(event) {
+                      const modal = document.getElementById('modal');
+                      if (event.target === modal) {
+                          closeForm();
+                      }
+                  }
+              </script>
+            <button class="video-button">
+                <p>Посмотреть видео</p>
+            </button>
+          </div>
+          <div class="pic-right">
+            <img src="img/v204_33.png" alt="Девушка записывается" class="girl-image" />
+          </div>
+        </div>
+        
+  </header>
+    <div class="func-content">
+        <div class="middle">
+            <div class="content-text">
+                <h1 class="h1-stage">Студия озвучивания<br>ваших проектов</h1>
+            </div>
+            <p class="low-text">Проще доверить работу специалистам, потому что <br> они способны обеспечить наилучшие результаты <br> при надежном качестве</p>
+            <div class="stats-container">
+                <div class="column">
+                    <div class="stat-item">
+                        <div class="stat-number">300+</div>
+                        <p class="stat-label">Проектов завершено</p>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-number">621+</div>
+                        <p class="stat-label">Положительных отзывов</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="stat-item">
+                        <div class="stat-number">93+</div>
+                        <p class="stat-label">Наград получено</p>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-number">21+</div>
+                        <p class="stat-label">Опыт работы</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pic-container">
+                <div class="pic-card">
+                  <img src="img/v204_41.png" alt="Иконка" class="pic-icon">
+                  <div class="pic-content">
+                    <h3 class="pic-title">Закадровый голос</h3>
+                    <p class="pic-count">108 Проектов</p>
+                  </div>
+                  <img src="img/ic.png" alt="Иконка" class="pic-arrow">
+                </div>
+                <div class="pic-card">
+                  <img src="img/v204_38.png" alt="Иконка" class="pic-icon">
+                  <div class="pic-content">
+                    <h3 class="pic-title">Перевод</h3>
+                    <p class="pic-count">33 Проектов</p>
+                  </div>
+                  <img src="img/ic.png" alt="Иконка" class="pic-arrow">
+                </div>
+              
+                <div class="pic-card">
+                  <img src="img/v15_51.png" alt="Иконка" class="pic-icon">
+                  <div class="pic-content">
+                    <h3 class="pic-title">Вокал / Инструменты</h3>
+                    <p class="pic-count">44 Проектов</p>
+                  </div>
+                  <img src="img/ic.png" alt="Иконка" class="pic-arrow">
+                </div>
+            </div>
+        <div class="main-container">
+            <div class="column">
+                <img src="img/v15_124.png" alt="Иконка" class="card-column">
+                <h1 class="cardd">Запись голоса</h1>
+                <p class="details-link">Смотреть детали
+                    <img src="img/ic123.png" alt="Стрелка" class="txt-arrow">
+                </p>
+            </div>
+            <div class="column">
+                <img src="img/v15_122.png" alt="Иконка" class="card-column">
+                <h1 class="cardd">Сведение/Мастеринг</h1>
+                <p class="details-link">Смотреть детали
+                    <img src="img/ic123.png" alt="Стрелка" class="txt-arrow">
+                </p>
+            </div>
+            <div class="column">
+                <img src="img/v15_125.png" alt="Иконка" class="card-column">
+                <h1 class="cardd">Работа под ключ</h1>
+                <p class="details-link">Смотреть детали
+                    <img src="img/ic123.png" alt="Стрелка" class="txt-arrow">
+                </p>
+            </div>
+        </div>
+    </div>
+ </div>
+<div class="cards-contents">
+    <h1 class="cards-text">Выберите Свой<br> Лучший пакет услуг</h1>
+    <div class="cards-title">
+        <h1 class="prices">Список цен за услуги</h1>
+        <p class="descr">У вас есть много связанных с этим потребностей,<br> мы предлагаем подходящий пакет для ваших нужд</p>
+    </div>
+</div>
+<div class="tarrif-cards-main">
+    <div class="package-card">
+        <div class="package-header">
+          <h1 class="package-price">₽1,5к /</h1>
+          <h1 class="package-price-time"> 2 часа</h1> 
+        </div>
+        <h2 class="package-title">Обычный пакет</h2>
+        <ul class="package-features">
+          <li class="li-1">Профессиональная запись</li>
+          <li class="li-1">Креативный микс на выходе</li>
+          <li class="li-1">Общий мастеринг</li>
+          <li class="li-1">Ручная коррекция нот</li>
+        </ul>
+        <button class="book-button">Забронировать</button>
+      </div>
+      <div class="package-card highlighted">
+        <div class="package-header">
+          <h1 class="package-price">₽3к /</h1>
+          <h1 class="package-price-time"> 2 часа</h1> 
+        </div>
+        <h2 class="package-title">Pro-пакет</h2>
+        <ul class="package-features">
+          <li>2 спальни для отдыха</li>
+          <li>Проф. подготовка голоса</li>
+          <li>2 Гостинных для компаний</li>
+        </ul>
+      </div>
+      <div class="package-card">
+        <div class="package-header">
+          <h1 class="package-price">₽4,5к /</h1>
+          <h1 class="package-price-time"> 2 часа</h1> 
+        </div>
+        <h2 class="package-title">Пакет “Premium”</h2>
+        <ul class="package-features">
+          <li>Подбор аппаратуры под вас</li>
+          <li>Вы вносите правки в процесс</li>
+          <li>Полное курирование</li>
+        </ul>
+      </div>
+</div>
+<div class="main-footer">
+    <div class="part-footer">
+        <h1 class="mus-prod">Music Prod</h1>
+        <p class="footer-text">Проще доверить эту работу <br> специалистам, потому что они <br> дают гарантию качества!</p>
+         <div class="pic-column">
+            <div class="logo-vk">
+                <img src="img/v202_13.png" alt="ЛогоVk" class="icons-VK">
+                <img src="img/Ellipse 4.png" alt="elips1" class="elipse">
+            </div>
+            <div class="logo-tg">
+                <img src="img/v202_14.png" alt="ЛогоTG" class="icons-TG">
+                <img src="img/Ellipse 4.png" alt="elipse" class="elipse">
+            </div>
+            <div class="logo-YT">
+                <img src="img/v202_15.png" alt="ЛогоYT" class="icons-YT">
+                <img src="img/Ellipse 4.png" alt="elipse" class="elipse">
+            </div>
+         </div>
+    </div>
+    <div class="part-footer">
+            <ul class="list-column">
+              <h1 class="footer-main-text">О нас</h1>
+              <li>История</li>
+              <li>Блоги</li>
+              <li>Новостная рассылка</li>
+              <li>Цены</li>
+            </ul>
+    </div>
+    <div class="part-footer">
+        <ul class="list-column">
+            <h1 class="footer-main-text">Информация</h1>
+            <li>Карта сайта</li>
+            <li>Свяжись с нами</li>
+            <li>Сообщество</li>
+          </ul>
+    </div>
+    <div class="part-footer">
+        <h1 class="last-footer">Будем на связи</h1>
+        <p class="last-footer-text">Доверься нам и позволь<br> раскрыть потенциал твоего<br> голоса на все 100 %</p>
+        <button class="call-button">Связь с нами</button>
+    </div>
+</div>
+<footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <span class="copyright">
+            © <span class="studio-name">Music Prod Studio</span> 2025 все права защищены
+        </span>
+        <nav class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Term & Services</a>
+        </nav>
+      </div>
+    </div>
+</footer>
+</body>
