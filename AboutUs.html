@@ -12,6 +12,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
     <link href="css/AboutUs.css" rel="stylesheet" />
 </head>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Находим все элементы с классом 'image'
+    const imageElements = document.querySelectorAll('.image');
+    
+    // Устанавливаем фоновое изображение для каждого элемента
+    imageElements.forEach(element => {
+        element.style.backgroundImage = 'url("img/Group-14.png")';
+    });
+    
+    // Опционально: предзагрузка изображения
+    const imgPreload = new Image();
+    imgPreload.src = "/img/Uslugi.png";
+});
+    </script>
 <header>
     <div class="header-container-main">
         <div class="header-container-1">
