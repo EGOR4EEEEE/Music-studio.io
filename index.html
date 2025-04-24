@@ -99,6 +99,7 @@
                           closeForm();
                       }
                   }
+                  <script>
     // Блокировка горизонтальной прокрутки
     function disableHorizontalScroll() {
         document.documentElement.style.overflowX = 'hidden';
@@ -115,11 +116,12 @@
     // Вызов функции после загрузки страницы
     window.addEventListener('load', function() {
         disableHorizontalScroll();
-    });
-        </script>
-<button class="video-button" onclick="window.location.href='404.html'">
-    <p>Посмотреть видео</p>
-</button>
+    }); // Исправлена закрывающая скобка
+</script>
+              </script>
+            <button class="video-button" onclick="window.location.href='404.html'">
+                <p>Посмотреть видео</p>
+            </button>
           </div>
           <div class="pic-right">
             <img src="img/v204_33.png" alt="Девушка записывается" class="girl-image" />
