@@ -99,7 +99,7 @@ p.yellow{
 .img{
   width: 1884px;
   height: 782px;
-  background-image: url(/img/Group\ 14.png);
+  background: url(/img/Group\ 14.png);
   background-position: right center ;
   background-repeat: no-repeat;
   background-size: 75% auto;
