@@ -96,10 +96,9 @@ p.yellow{
   letter-spacing: 3px;
   font-size: 18px;
 }
-.img{
+.image{
   width: 1884px;
   height: 782px;
-  background: url(/img/Group\ 14.png);
   background-position: right center ;
   background-repeat: no-repeat;
   background-size: 75% auto;
