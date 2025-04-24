@@ -15,10 +15,10 @@
 <body>
     <header class="header-container">
         <div class="header-container-main">
-            <a href="index.html">Главная</a>
-            <a href="AboutUs.html">О нас</a>
-            <a href="Uslugi.html">Услуги</a>
-            <a href="Contacts.html">Контакты</a>
+            <a href="/index.html">Главная</a>
+            <a href="/AboutUs.html">О нас</a>
+            <a href="/Uslugi.html">Услуги</a>
+            <a href="/Contacts.html">Контакты</a>
         </div>
         <div class="main-pic-column">
           <div class="main-content">
@@ -99,10 +99,51 @@
                           closeForm();
                       }
                   }
+function disableHorizontalScroll() {
+    const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+    
+    document.documentElement.style.overflowX = 'hidden';
+    document.body.style.overflowX = 'hidden';
+    
+    window.addEventListener('scroll', lockHorizontalScroll);
+    
+    document.addEventListener('touchstart', handleTouchStart);
+    document.addEventListener('touchmove', handleTouchMove, { passive: false });
+}
+
+function lockHorizontalScroll() {
+    window.scrollTo(
+        window.pageXOffset || document.documentElement.scrollLeft,
+        window.pageYOffset || document.documentElement.scrollTop
+    );
+}
+
+let startX, startY;
+
+function handleTouchStart(e) {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+}
+
+function handleTouchMove(e) {
+    if (!e.touches.length) return;
+    
+    const currentX = e.touches[0].clientX;
+    const currentY = e.touches[0].clientY;
+    const diffX = Math.abs(currentX - startX);
+    const diffY = Math.abs(currentY - startY);
+
+    if (diffX > diffY) {
+        e.preventDefault();
+    }
+}
+
+disableHorizontalScroll(); 
+
               </script>
-            <button class="video-button" onclick="window.location.href='404.html'">
-                <p>Посмотреть видео</p>
-            </button>
+<button class="video-button" onclick="window.location.href='404.html'">
+    <p>Посмотреть видео</p>
+</button>
           </div>
           <div class="pic-right">
             <img src="img/v204_33.png" alt="Девушка записывается" class="girl-image" />
