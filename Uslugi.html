@@ -98,6 +98,19 @@
                         closeForm();
                     }
                 }
+                document.addEventListener('DOMContentLoaded', function() {
+    // Находим все элементы с классом 'image'
+    const imageElements = document.querySelectorAll('.image');
+    
+    // Устанавливаем фоновое изображение для каждого элемента
+    imageElements.forEach(element => {
+        element.style.backgroundImage = 'url("/img/Uslugi.png")';
+    });
+    
+    // Опционально: предзагрузка изображения
+    const imgPreload = new Image();
+    imgPreload.src = "/img/Uslugi.png";
+});
             </script>
             <button class="video-button">
                 <p>Связь с нами</p>
