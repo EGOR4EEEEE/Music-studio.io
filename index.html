@@ -99,48 +99,33 @@
                           closeForm();
                       }
                   }
-function disableHorizontalScroll() {
-    const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-    
-    document.documentElement.style.overflowX = 'hidden';
-    document.body.style.overflowX = 'hidden';
-    
-    window.addEventListener('scroll', lockHorizontalScroll);
-    
-    document.addEventListener('touchstart', handleTouchStart);
-    document.addEventListener('touchmove', handleTouchMove, { passive: false });
-}
+        // Блокировка горизонтальной прокрутки
+        function disableHorizontalScroll() {
+            document.documentElement.style.overflowX = 'hidden';
+            document.body.style.overflowX = 'hidden';
+            
+            // Для мобильных устройств
+            document.addEventListener('touchmove', function(e) {
+                if(e.touches.length && Math.abs(e.touches[0].clientX - startX) > 5) {
+                    e.preventDefault();
+                }
+            }, { passive: false });
+        }
 
-function lockHorizontalScroll() {
-    window.scrollTo(
-        window.pageXOffset || document.documentElement.scrollLeft,
-        window.pageYOffset || document.documentElement.scrollTop
-    );
-}
-
-let startX, startY;
-
-function handleTouchStart(e) {
-    startX = e.touches[0].clientX;
-    startY = e.touches[0].clientY;
-}
-
-function handleTouchMove(e) {
-    if (!e.touches.length) return;
-    
-    const currentX = e.touches[0].clientX;
-    const currentY = e.touches[0].clientY;
-    const diffX = Math.abs(currentX - startX);
-    const diffY = Math.abs(currentY - startY);
-
-    if (diffX > diffY) {
-        e.preventDefault();
-    }
-}
-
-disableHorizontalScroll(); 
-
-              </script>
+        // Вызов функции после загрузки страницы
+        window.addEventListener('load', function() {
+            disableHorizontalScroll();
+            
+            // Дополнительная проверка элементов
+            const elements = document.querySelectorAll('*');
+            elements.forEach(el => {
+                if(el.offsetWidth > document.documentElement.clientWidth) {
+                    console.warn('Широкий элемент:', el);
+                    el.style.outline = '2px solid red';
+                }
+            });
+        });
+        </script>
 <button class="video-button" onclick="window.location.href='404.html'">
     <p>Посмотреть видео</p>
 </button>
