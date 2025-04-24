@@ -5,8 +5,8 @@
   background-color: black;
 }
 html, body {
-  overflow-x: hidden; /* Блокирует горизонтальную прокрутку */
-  overflow-y: auto;    /* Разрешает вертикальную */
+  overflow-x: hidden;
+  overflow-y: auto; 
 }
 a {
   font-size: 24px;
