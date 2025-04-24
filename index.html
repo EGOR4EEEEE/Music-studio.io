@@ -116,15 +116,7 @@
         window.addEventListener('load', function() {
             disableHorizontalScroll();
             
-            // Дополнительная проверка элементов
-            const elements = document.querySelectorAll('*');
-            elements.forEach(el => {
-                if(el.offsetWidth > document.documentElement.clientWidth) {
-                    console.warn('Широкий элемент:', el);
-                    el.style.outline = '2px solid red';
-                }
-            });
-        });
+        };
         </script>
 <button class="video-button" onclick="window.location.href='404.html'">
     <p>Посмотреть видео</p>
